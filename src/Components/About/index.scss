@@ -1,0 +1,6 @@
+@import '../../shared-styles/variables.scss';
+@import '../../shared-styles/themes.scss';
+
+.page-about {
+  @extend %theme-secondary;
+}

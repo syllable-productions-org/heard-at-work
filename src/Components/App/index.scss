@@ -1,0 +1,21 @@
+@import '../../shared-styles/variables.scss';
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.page {
+  top: 0;
+  left: 0;
+  position: absolute;
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+.page-inner {
+  padding: 1rem;
+}

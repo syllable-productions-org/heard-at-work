@@ -1,0 +1,17 @@
+%theme-primary {
+  &,
+  a {
+    color: $color-primary;
+  }
+
+  background: $color-secondary;
+}
+
+%theme-secondary {
+  &,
+  a {
+    color: $color-secondary;
+  }
+
+  background: $color-primary;
+}

@@ -1,6 +1,6 @@
 {
-  "name": "my-razzle-app",
-  "version": "2.0.0-alpha.8",
+  "name": "razzle-examples-with-scss",
+  "version": "2.2.0",
   "license": "MIT",
   "scripts": {
     "start": "razzle start",
@@ -10,9 +10,12 @@
   },
   "dependencies": {
     "express": "^4.16.3",
-    "razzle": "^2.2.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-router-dom": "^4.3.1"
+  },
+  "devDependencies": {
+    "razzle": "^2.2.0",
+    "razzle-plugin-scss": "file:./packages/razzle-plugin-scss/"
   }
 }
