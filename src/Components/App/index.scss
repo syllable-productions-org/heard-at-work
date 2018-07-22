@@ -1,11 +1,24 @@
 @import '../../shared-styles/variables.scss';
+@import '../../shared-styles/mixins.scss';
+@import '../../shared-styles/reset.css';
+@import '../../shared-styles/fontello/css/fontello.css';
 
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,700');
+@import url('https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,700');
+
+html,
+body {
+  font-size: $font-size-base;
+}
 
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Open Sans', sans-serif;
+  font-family: $font-family;
+}
+
+a {
+  text-decoration: none;
 }
 
 .page {
@@ -14,8 +27,23 @@ body {
   position: absolute;
   min-height: 100vh;
   min-width: 100vw;
+
+  .menu {
+    @include center-horz();
+
+    top: 0;
+    margin-top: 2rem;
+  }
 }
 
 .page-inner {
   padding: 1rem;
+}
+
+.flex-wrap {
+  @include flex-wrap();
+}
+
+.no-wrap {
+  white-space: nowrap;
 }

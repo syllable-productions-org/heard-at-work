@@ -8,16 +8,16 @@ class About extends React.Component {
       <div className="page page-about">
         <div className="page-inner">
           <Menu />
-          <section>
+          <section className="featured">
             <span>
-              Heard at Work is a collection of things that caught my ear while working at Pentagram in New York from 2016–2018.
+              Heard at Work is a collection of things that caught my ear while working at Pentagram in <span className="no-wrap">New York</span> from <span className="no-wrap">2016–2018</span>.
             </span>
-            <div className="close-button">
-              <a href="/">
-                X
-              </a>
-            </div>
           </section>
+          <div className="close-button">
+            <a href="/">
+              X
+            </a>
+          </div>
         </div>
       </div>
     );

@@ -55,7 +55,7 @@ class Home extends React.Component {
           <Menu />
           <QuoteDisplay quote={currQuote} />
 
-          <button onClick={this.handleNextQuote} >
+          <button className="button-refresh" onClick={this.handleNextQuote} >
             refresh
           </button>
         </div>

@@ -1,6 +1,14 @@
 @import '../../shared-styles/variables.scss';
+@import '../../shared-styles/mixins.scss';
 @import '../../shared-styles/themes.scss';
 
 .page-home {
   @extend %theme-primary;
+
+  .button-refresh {
+    @include center-horz();
+
+    bottom: 0;
+    margin-bottom: 2rem;
+  }
 }
