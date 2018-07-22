@@ -1,27 +1,19 @@
-import app from './server';
-import http from 'http';
+import React from 'react'
+import ReactDOM from 'react-dom'
 
-const server = http.createServer(app);
-const port = process.env.PORT || 3000;
+// Your top level component
+import App from './App'
 
-let currentApp = app;
+// Export your top level component as JSX (for static rendering)
+export default App
 
-server.listen(port, error => {
-  if (error) {
-    console.log(error);
+// Render your app
+if (typeof document !== 'undefined') {
+  const renderMethod = module.hot ? ReactDOM.render : ReactDOM.hydrate || ReactDOM.render
+  const render = Comp => {
+    renderMethod(<Comp />, document.getElementById('root'))
   }
 
-  console.log(`🚀 started on port ${port}`);
-});
-
-if (module.hot) {
-  console.log('✅  Server-side HMR Enabled!');
-
-  module.hot.accept('./server', () => {
-    console.log('🔁  HMR Reloading `./server`...');
-    server.removeListener('request', currentApp);
-    const newApp = require('./server').default;
-    server.on('request', newApp);
-    currentApp = newApp;
-  });
+  // Render!
+  render(App)
 }

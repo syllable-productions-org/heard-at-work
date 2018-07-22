@@ -1,5 +1,3 @@
-@import '../../shared-styles/themes.scss';
-
-.page-about {
-  @extend %theme-secondary;
+body {
+  display: none;
 }
