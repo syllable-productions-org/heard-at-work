@@ -1,6 +1,7 @@
 import axios from 'axios'
 
 export default {
+  plugins: ['react-static-plugin-sass'],
   getSiteData: () => ({
     title: 'React Static',
   }),
