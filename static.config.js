@@ -1,38 +1,53 @@
 import axios from 'axios'
+import ExtractCssChunks from 'extract-css-chunks-webpack-plugin'
 
 export default {
-  plugins: ['react-static-plugin-sass'],
+  webpack: (config, { stage }) => {
+    let loaders = []
+    let includePaths = []
+
+    const sassLoaderPath = require.resolve('sass-loader')
+
+    const sassLoader = {
+      loader: sassLoaderPath,
+      options: { includePaths: ['src/', ...includePaths] },
+    }
+    const styleLoader = { loader: 'style-loader' }
+    const cssLoader = {
+      loader: 'css-loader',
+      options: {
+        importLoaders: 1,
+        minimize: stage === 'prod',
+        sourceMap: false,
+      },
+    }
+
+    if (stage === 'dev') {
+      // Dev
+      loaders = [styleLoader, cssLoader, sassLoader]
+    } else if (stage === 'node') {
+      // Node
+      // Don't extract css to file during node build process
+      loaders = [cssLoader, sassLoader]
+    } else {
+      // Prod
+      loaders = [ExtractCssChunks.loader, cssLoader, sassLoader]
+    }
+
+    config.module.rules[0].oneOf.unshift({
+      test: /\.s(a|c)ss$/,
+      use: loaders,
+    })
+
+    return config
+  },
   getSiteData: () => ({
     title: 'React Static',
   }),
   getRoutes: async () => {
-    const { data: posts } = await axios.get('https://jsonplaceholder.typicode.com/posts')
     return [
       {
-        path: '/',
-        component: 'src/containers/Home',
-      },
-      {
-        path: '/about',
-        component: 'src/containers/About',
-      },
-      {
-        path: '/blog',
-        component: 'src/containers/Blog',
-        getData: () => ({
-          posts,
-        }),
-        children: posts.map(post => ({
-          path: `/post/${post.id}`,
-          component: 'src/containers/Post',
-          getData: () => ({
-            post,
-          }),
-        })),
-      },
-      {
-        is404: true,
-        component: 'src/containers/404',
+        path: '/blog'
       },
     ]
   },
