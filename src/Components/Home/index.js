@@ -1,6 +1,7 @@
 import React from 'react';
 import Menu from '../Menu';
 import QuoteDisplay from '../QuoteDisplay';
+import ReloadQuoteButton from '../ReloadQuoteButton';
 import quotes from '../../data-quotes.json';
 import './index.scss';
 
@@ -37,9 +38,8 @@ class Home extends React.Component {
     return idx;
   }
 
-  handleNextQuote(e) {
+  handleNextQuote() {
     const newIdx = this.getValidatedIdx(getRandomIdx());
-    console.log(newIdx);
 
     this.setState({
       currQuoteInt: newIdx,
@@ -54,10 +54,7 @@ class Home extends React.Component {
         <div className="page-inner">
           <Menu />
           <QuoteDisplay quote={currQuote} />
-
-          <button className="button-refresh" onClick={this.handleNextQuote} >
-            <span className="icon-cw">&nbsp;</span>
-          </button>
+          <ReloadQuoteButton handleNextQuote={this.handleNextQuote} />
         </div>
       </div>
     );

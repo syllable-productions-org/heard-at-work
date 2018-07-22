@@ -8,10 +8,6 @@
   }
 
   background: $color-secondary;
-
-  .button-refresh {
-    @include bottom-button();
-  }
 }
 
 %theme-secondary {

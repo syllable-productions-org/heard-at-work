@@ -10,7 +10,10 @@ class Menu extends React.Component {
             <a href="/about">About</a>
           </li>
           <li className="item-primary flex-item">
-            <a href="/">Heard <br />at Work</a>
+            <a href="/">Heard
+              <br />
+              at Work
+            </a>
           </li>
           <li className="item-secondary flex-item">
             <a href="/contact">Contact</a>
