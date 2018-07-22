@@ -1,5 +1,6 @@
 import React from 'react';
 import Menu from '../Menu';
+import CloseButton from '../CloseButton';
 import './index.scss';
 
 class About extends React.Component {
@@ -13,11 +14,7 @@ class About extends React.Component {
               Heard at Work is a collection of things that caught my ear while working at Pentagram in <span className="no-wrap">New York</span> from <span className="no-wrap">2016–2018</span>.
             </span>
           </section>
-          <div className="close-button">
-            <a href="/">
-              X
-            </a>
-          </div>
+          <CloseButton />
         </div>
       </div>
     );

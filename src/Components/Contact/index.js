@@ -1,5 +1,6 @@
 import React from 'react';
 import Menu from '../Menu';
+import CloseButton from '../CloseButton';
 import './index.scss';
 
 class Contact extends React.Component {
@@ -15,11 +16,7 @@ class Contact extends React.Component {
             <br />
             <a href="mailto:justine.braisted@gmail.com?subject=Hello" target='_blank' rel="noopener noreferrer">justine.braisted@gmail.com</a>
           </section>
-          <div className="close-button">
-            <a href="/">
-              X
-            </a>
-          </div>
+          <CloseButton />
         </div>
       </div>
     );

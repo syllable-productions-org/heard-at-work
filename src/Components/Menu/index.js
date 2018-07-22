@@ -16,7 +16,6 @@ class Menu extends React.Component {
             <a href="/contact">Contact</a>
           </li>
         </ul>
-        <span className="icon-cancel">icon-cancel</span>
       </div>
     );
   }
