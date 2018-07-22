@@ -1,3 +1,6 @@
+@import '../../shared-styles/variables.scss';
+@import '../../shared-styles/mixins.scss';
+
 %theme-primary {
   &,
   a {
@@ -5,6 +8,10 @@
   }
 
   background: $color-secondary;
+
+  .button-refresh {
+    @include bottom-button();
+  }
 }
 
 %theme-secondary {
@@ -14,4 +21,12 @@
   }
 
   background: $color-primary;
+
+  .featured {
+    @include big-center();
+  }
+
+  .close-button {
+    @include bottom-button();
+  }
 }
