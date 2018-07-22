@@ -15,13 +15,8 @@
     &.item-primary {
       font-size: $font-size-md;
     }
-  }
-}
 
-// todo: this will duplicate these rules... fix later
-@media screen and (max-width: $screen-size-tablet) {
-  .menu {
-    li {
+    @media screen and (max-width: $screen-size-tablet) {
       font-size: $font-size-sm;
       padding: 0 1rem;
     }
