@@ -1,3 +1,5 @@
-a {
-  display: none !important;
+@import '../../shared-styles/themes.scss';
+
+.page-about {
+  @extend %theme-secondary;
 }

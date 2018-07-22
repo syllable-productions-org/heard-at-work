@@ -1,5 +1,3 @@
-import axios from 'axios'
-
 // This is taken from
 // https://github.com/nozzle/react-static/blob/master/examples/sass/plugins/react-static-plugin-sass.js
 // but i cant figure out how it's supposed to work as a proper react-static plugin
@@ -52,33 +50,22 @@ export default {
     title: 'React Static',
   }),
   getRoutes: async () => {
-    const { data: posts } = await axios.get('https://jsonplaceholder.typicode.com/posts')
     return [
       {
         path: '/',
-        component: 'src/containers/Home',
+        component: 'src/Components/Home',
       },
       {
         path: '/about',
-        component: 'src/containers/About',
+        component: 'src/Components/About',
       },
       {
-        path: '/blog',
-        component: 'src/containers/Blog',
-        getData: () => ({
-          posts,
-        }),
-        children: posts.map(post => ({
-          path: `/post/${post.id}`,
-          component: 'src/containers/Post',
-          getData: () => ({
-            post,
-          }),
-        })),
+        path: '/contact',
+        component: 'src/Components/Contact',
       },
       {
         path: '404',
-        component: 'src/containers/404',
+        component: 'src/Components/404',
       },
     ]
   },
