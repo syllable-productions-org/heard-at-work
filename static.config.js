@@ -1,12 +1,13 @@
+import ExtractCssChunks from 'extract-css-chunks-webpack-plugin';
+const sassLoaderPath = require.resolve('sass-loader');
+
 // This is taken from
 // https://github.com/nozzle/react-static/blob/master/examples/sass/plugins/react-static-plugin-sass.js
 // but i cant figure out how it's supposed to work as a proper react-static plugin
 const reactStaticPluginSass = (config, { stage }) => {
-  const ExtractCssChunks = require('extract-css-chunks-webpack-plugin');
   let loaders = []
   let includePaths = []
 
-  const sassLoaderPath = require.resolve('sass-loader')
 
   const sassLoader = {
     loader: sassLoaderPath,
