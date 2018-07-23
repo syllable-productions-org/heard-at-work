@@ -14,6 +14,9 @@
   font-size: $font-size-bottom-button;
 
   &[data-mouse-down=true] {
-    bottom: -$button-effect-height;
+    span {
+      transform: translate(0px, $button-effect-height);
+      display: block;
+    }
   }
 }
