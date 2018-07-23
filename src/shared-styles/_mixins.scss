@@ -61,14 +61,12 @@
   font-family: $font-family-quote;
   font-weight: 600;
   min-width: $screen-size-tablet;
-  line-height: 1.25em;
+  line-height: 1.15em;
 
   // todo: this will duplicate these rules... fix later
   @media screen and (max-width: $screen-size-tablet) {
     min-width: 0;
     max-width: 100%;
-    // fix seems needed for old mobile screens if the email address falls off the screen
-    overflow: scroll;
     font-size: $font-size-lg * .8;
   }
 
