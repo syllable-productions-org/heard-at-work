@@ -12,7 +12,7 @@ class Menu extends React.Component {
           <li className="item-primary flex-item">
             <a href="/">Heard
               <br />
-              at Work
+              <span className="no-wrap">at Work</span>
             </a>
           </li>
           <li className="item-secondary flex-item">

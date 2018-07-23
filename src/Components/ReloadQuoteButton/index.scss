@@ -16,6 +16,7 @@
   &[data-mouse-down=true] {
     span {
       transform: translate(0px, $button-effect-height);
+      // animation-duration: 2s;
       display: block;
     }
   }

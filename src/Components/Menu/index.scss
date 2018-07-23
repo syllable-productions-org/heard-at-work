@@ -14,10 +14,10 @@
 
     &.item-primary {
       font-size: $font-size-md;
+      font-family: $font-family-quote;
     }
 
-    @media screen and (max-width: $screen-size-tablet) {
-      font-size: $font-size-sm;
+    @media screen and (max-width: $screen-size-mobile) {
       padding: 0 1rem;
     }
   }

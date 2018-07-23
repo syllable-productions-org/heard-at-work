@@ -67,12 +67,15 @@
   @media screen and (max-width: $screen-size-tablet) {
     min-width: 0;
     max-width: 100%;
-    font-size: $font-size-lg * .8;
   }
 
   @media screen and (max-width: $screen-size-mobile) {
-    font-size: $font-size-lg * .6;
+    font-size: $font-size-lg * .75;
+    line-height: 1.15em;
     width: 80vw;
+    max-height: 60vh;
+    overflow-y: auto;
+    overflow-x: hidden;
   }
 }
 
