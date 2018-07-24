@@ -59,6 +59,7 @@
   text-align: center;
   font-size: $font-size-lg;
   font-family: $font-family-quote;
+  letter-spacing: $letter-spacing;
   font-weight: 600;
   min-width: $screen-size-tablet;
   line-height: 1.15em;
@@ -75,7 +76,7 @@
     width: 80vw;
     max-height: 60vh;
     overflow-y: auto;
-    overflow-x: hidden;
+    word-wrap: break-word;
   }
 }
 
