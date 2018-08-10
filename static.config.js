@@ -8,7 +8,7 @@ export default {
     type: 'website',
     url: 'https://www.heardatwork.co/',
     site_name: 'Heard at Work',
-    imageUrl: '/social-image.png',
+    imageUrl: 'https://www.heardatwork.co/social-image.png',
   }),
   getRoutes: async () => {
     return [
