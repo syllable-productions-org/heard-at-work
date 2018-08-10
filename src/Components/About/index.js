@@ -10,8 +10,11 @@ class About extends React.Component {
         <div className="page-inner">
           <Menu />
           <section className="featured">
-            <span>
-              Heard at Work is a collection of things that caught my ear while working at Pentagram in <span className="no-wrap">New York</span> from <span className="no-wrap">2016–2018</span>.
+            <h2>
+              Heard at Work is a collection of overheard exclamations that aims to capture what it’s like to work in a New York design studio.
+            </h2>
+            <span className="small-text">
+              Created by <a href="https://justinebraisted.com/">Justine Braisted</a> in 2018. Site development by <a href="https://www.syllable.productions/">Syllable</a>.
             </span>
           </section>
           <CloseButton />

@@ -64,16 +64,24 @@
   min-width: $screen-size-tablet;
   line-height: 1.15em;
 
+  .small-text {
+    font-size: $font-size-base;
+    font-family: $font-family;
+    letter-spacing: 0;
+    display: block;
+    line-height: 1.5em;
+    margin-top: 2rem;
+  }
+
   // todo: this will duplicate these rules... fix later
   @media screen and (max-width: $screen-size-tablet) {
-    min-width: 0;
+    min-width: 80vw;
     max-width: 100%;
   }
 
   @media screen and (max-width: $screen-size-mobile) {
     font-size: $font-size-lg * .75;
     line-height: 1.15em;
-    width: 80vw;
     max-height: 60vh;
     overflow-y: auto;
     word-wrap: break-word;

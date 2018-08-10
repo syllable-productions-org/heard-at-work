@@ -1,7 +1,14 @@
+import React, { Component } from 'react';
+
 export default {
   plugins: ['react-static-plugin-sass'],
   getSiteData: () => ({
-    title: 'React Static',
+    title: 'Heard at Work',
+    description: 'A collection of overheard exclamations that aims to capture what it’s like to work in a New York design studio.',
+    type: 'website',
+    url: 'https://www.heardatwork.co/',
+    site_name: 'Heard at Work',
+    imageUrl: '/social-image.png',
   }),
   getRoutes: async () => {
     return [
@@ -22,5 +29,32 @@ export default {
         component: 'src/Components/404',
       },
     ]
+  },
+  Document: class CustomHtml extends Component {
+    render () {
+      const {
+        Html, Head, Body, children, siteData,
+      } = this.props
+
+      return (
+        <Html>
+          <Head>
+            <meta charSet="UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+            <meta name="description" content={`${siteData.description}`} />
+            <meta property="og:type" content={`${siteData.type}`} />
+            <meta property="og:title" content={`${siteData.title}`} />
+            <meta property="og:url" content={`${siteData.url}`} />
+            <meta property="og:site_name" content={`${siteData.site_name}`} />
+            <meta property="og:description" content={`${siteData.description}`} />
+            <meta property="og:image" content={`${siteData.imageUrl}`} />
+            <link rel="canonical" href={`${siteData.url}`} />
+
+            <title>{siteData.title}</title>
+          </Head>
+          <Body>{children}</Body>
+        </Html>
+      )
+    }
   },
 }

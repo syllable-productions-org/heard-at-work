@@ -7,9 +7,9 @@ class QuoteDisplay extends React.Component {
 
     return (
       <div className="quote-display">
-        <div>
+        <h2>
           {quote.text}
-        </div>
+        </h2>
       </div>
     );
   }
