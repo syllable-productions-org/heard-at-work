@@ -46,17 +46,7 @@ export default {
             <meta name="viewport" content="width=device-width, initial-scale=1" />
 
             <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71032587-2"></script>
-            <script>
-              {
-                `
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-
-                gtag('config', 'UA-71032587-2');
-                `
-              }
-            </script>
+            <script src="/ga.js" type="text/javascript" />
 
             <meta name="description" content={`${siteData.description}`} />
             <meta property="og:type" content={`${siteData.type}`} />
